@@ -66,3 +66,15 @@ from the source folder: `& "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.
 ## CLI USAGE
 
 from the folder of the .exe (or add the folder in ENV PATH): `MP3te.exe "C:\Music\Song.mp3" "New Title" "New Artist"`
+
+## ⚖️ License & Third-Party Credits
+
+### TagLibSharp
+
+This application uses **TagLibSharp**, a library for reading and writing metadata in media files.
+*   **Author:** Mono Project / TagLibSharp Contributors
+*   **Source:** [https://github.com/mono/taglib-sharp](https://github.com/mono/taglib-sharp)
+*   **License:** LGPL-2.1 (Lesser General Public License)
+*   **NuGet:** [https://www.nuget.org/packages/TagLibSharp](https://www.nuget.org/packages/TagLibSharp)
+
+The `TagLibSharp.dll` included with this software is unmodified. You may obtain the source code for the library from the official repository linked above.
