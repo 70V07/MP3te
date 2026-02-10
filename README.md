@@ -3,25 +3,66 @@ Built with a modern dark interface, it allows for quick editing of metadata, cov
 
 ⚠️ this tool is in Proto stage, provided as is it, without any warranty
 
-## FEATURES
+---
 
-*   **Hybrid Interface:** Works as a standard GUI application or a Command Line Tool for batch automation.
-*   **Dark Mode:** Native-feel dark theme optimized for Windows 10/11.
-*   **Smart Layout:** 3-column unified grid design (Tree/Cover | Editor | Details/Log).
-*   **History & Undo:** Tracks every change made during the session with single or multi-select Undo capability.
-*   **Cover Art:** View and replace MP3 cover art instantly.
-*   **Portable:** Single executable (plus TagLibSharp dependency), stores config in a local `.ini` file.
+## ✨ Features
+
+### Core Functionality
+-   **CLI/GUI Architecture:** Run as a fully functional Windows GUI application or use command-line arguments for batch automation/scripting.
+-   **Fast Tag Editing:** Powered by TagLibSharp for reliable reading and writing of ID3v1/ID3v2 tags.
+-   **Batch Processing:** Load entire folders recursively with automatic file tree generation.
+-   **Portable Design:** Single executable (plus one DLL dependency), no installation required. Settings are stored in a local .ini file. 
+
+### User Interface (Dark Mode)
+-   **Modern Dark Theme:** Custom dark color scheme optimized for Windows 10/11, including native dark scrollbars support.
+-   **3-Column Grid Layout:**
+    -   **Left:** Navigation Tree, Path Bar, and Cover Art.
+    -   **Center:** Main Tag Editor (Grid) and Change History.
+    -   **Right:** Technical Details and Event Log.
+-   **Responsive Design:** Resizable splitters with an automatic "Clean Layout" reset on startup to prevent UI glitches.
+
+### Editing & Management
+-   **Spreadsheet-Style Editing:** Edit Title, Artist, Album, Year, and Genre directly in the grid.
+-   **Cover Art Support:** View embedded cover art and replace it via right-click context menu.
+-   **History & Undo System:** Tracks every change made during the session.
+    -   **Selective Undo:** Revert specific changes from the history list.
+    -   **Multi-Select:** Undo multiple actions at once via Ctrl or Shift selection.
+-   **Clean Session:** dedicated [CLEAN] button to instantly clear logs and history without reverting file changes.
+
+### Technical Details
+-   **Real-time Logging:** Color-coded event log (Info, Warning, Error) for all operations.
+-   **Audio Analysis:** Displays technical metadata including Bitrate, Duration, Sample Rate (Hz), and Channel Mode (Stereo/Mono).
+-   **Crash Protection:** Safe handling of image streams to prevent GDI+ errors and memory leaks.
+
+---
+    
+## 🖥️ Interface Sections
+
+### 1. Top Bar
+-   **Path Bar:** Quick navigation input with "GO" button.
+-   **File Counter:** Shows the total count of loaded MP3 files.
+-   **Control Buttons:** Includes the [CLEAN] button to reset session data.
+
+### 2. Left Panel (Navigation)
+-   **Drive & Folder Tree:** Explorer-style tree view to navigate drives and directories.
+-   **Cover Art Preview:** Displays the embedded album art of the currently selected track. Context menu allows replacing the image.
+
+### 3. Center Panel (Editor)
+-   **Main Grid:** The primary workspace for editing metadata (Title, Artist, Album, Year, Genre). Changes are saved immediately upon leaving a cell.
+-   **History Log:** A chronological list of all modifications. Double-click or press Del to undo changes.
+
+### 4. Right Panel (Details)
+-   **Technical Grid:** Read-only view of audio properties (Bitrate, Duration, Hz, Mode).
+-   **Application Log:** A scrolling console output showing internal operations, errors, and confirmation messages.
 
 ## MANDATORY
-
 *   Windows 10/11
 *   .NET Framework 4.7.2 or higher
 *   TagLibSharp.dll (included in build)
 
 ## COMPILE (or just download the latest relase)
-
 from the source folder: `& "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /target:winexe /out:<PATH_OUTPUT>\MP3te.exe /optimize+ /win32icon:"<PATH_SOURCE>\MP3te.ico" /reference:TagLibSharp.dll /reference:System.Windows.Forms.dll /reference:System.Drawing.dll /reference:System.dll /reference:System.Core.dll *.cs`
 
-## USAGE
+## CLI USAGE
 
-**CLI Mode:** `MP3te.exe "C:\Music\Song.mp3" "New Title" "New Artist"`
+from the folder of the .exe (or add the folder in ENV PATH): `MP3te.exe "C:\Music\Song.mp3" "New Title" "New Artist"`
