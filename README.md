@@ -95,4 +95,5 @@ This application uses **TagLibSharp**, a library for reading and writing metadat
 *   **License:** LGPL-2.1 (Lesser General Public License)
 *   **NuGet:** [https://www.nuget.org/packages/TagLibSharp](https://www.nuget.org/packages/TagLibSharp)
 
-The `TagLibSharp.dll` included with this software is unmodified. You may obtain the source code for the library from the official repository linked above.
+The `TagLibSharp.dll` included with this software is unmodified.  
+You may obtain the source code for the library from the official repository linked above.
