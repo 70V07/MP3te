@@ -20,7 +20,7 @@ Built with a modern dark interface, it allows for quick editing of metadata, cov
 
 ## COMPILE (or just download the latest relase)
 
-`& "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /target:winexe /out:<PATH_OUTPUT>\MP3te.exe /optimize+ /win32icon:"<PATH_SOURCE>\MP3te.ico" /reference:TagLibSharp.dll /reference:System.Windows.Forms.dll /reference:System.Drawing.dll /reference:System.dll /reference:System.Core.dll *.cs`
+from the source folder: `& "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /target:winexe /out:<PATH_OUTPUT>\MP3te.exe /optimize+ /win32icon:"<PATH_SOURCE>\MP3te.ico" /reference:TagLibSharp.dll /reference:System.Windows.Forms.dll /reference:System.Drawing.dll /reference:System.dll /reference:System.Core.dll *.cs`
 
 ## USAGE
 
